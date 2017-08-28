@@ -16,7 +16,7 @@
         </div>
         <div class="panel-footer">
             <button type="submit" class="btn btn-info">Update</button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            <a href="{{ route('event.index') }}" type="button" class="btn btn-danger" data-dismiss="modal">Close</a>
         </div>
     </div>
     {!! Form::close() !!}
