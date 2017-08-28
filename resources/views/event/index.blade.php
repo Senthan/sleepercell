@@ -72,10 +72,18 @@
 
             calendar.fullCalendar({
                 schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
+                customButtons: {
+                    add_event: {
+                        text: 'Create Event',
+                        click: function() {
+                            window.location = "{{ route('event.create') }}";
+                        }
+                    }
+                },
                 header: {
                     left: 'prevYear,prev,next,nextYear today',
                     center: 'title',
-                    right: 'addEvent,timelineYear,month,agendaWeek,agendaDay'
+                    right: 'add_event,timelineYear,month,agendaWeek,agendaDay'
                 },
                 views: {
                     timelineYear: {
